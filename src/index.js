@@ -3,12 +3,17 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { PrimeReactProvider } from 'primereact/api';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+const value = {
+    appendTo: 'self'
+};
 root.render(
-  <React.StrictMode>
+<PrimeReactProvider value={value}>
     <App />
-  </React.StrictMode>
+
+ </PrimeReactProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function
